@@ -63,13 +63,27 @@
 			<artifactId>p6spy-spring-boot-starter</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>4.0.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<includes>*LocalIT</includes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
