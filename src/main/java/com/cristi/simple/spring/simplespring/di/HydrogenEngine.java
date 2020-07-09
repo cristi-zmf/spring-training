@@ -4,11 +4,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Primary
-public class ElectricEngine implements Engine {
+@Primary
+public class HydrogenEngine implements Engine {
 
     @Override
     public void run() {
-        System.out.println("I feel so green because I dont pollute! Oh, wait... Where does my energy come from?");
+        System.out.println("Running on hydrogen");
     }
 }

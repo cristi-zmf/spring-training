@@ -2,7 +2,7 @@ package com.cristi.simple.spring.simplespring.di;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component //Spring Bean, manageuit de spring
 public class DieselEngine implements Engine {
 
     @Override

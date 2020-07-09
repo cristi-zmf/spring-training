@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 
-@Service
+@Service // Spring bean
 public class Dice {
 
     @PostConstruct

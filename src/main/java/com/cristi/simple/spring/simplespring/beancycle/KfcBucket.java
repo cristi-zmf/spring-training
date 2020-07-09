@@ -30,4 +30,9 @@ public class KfcBucket {
         bucketContent.clear();
         System.out.println("There, I destroyed this bucket!!!");
     }
+
+    @PreDestroy
+    public void whatever() {
+        System.out.println("Do something before destroying myself");
+    }
 }

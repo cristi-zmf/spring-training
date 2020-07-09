@@ -3,6 +3,7 @@ package com.cristi.simple.spring.simplespring.jparepo;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Table(name = "SMARTPHONE")
 @Setter @Getter
 @NoArgsConstructor
+@ToString
 public class Smartphone {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -28,4 +30,5 @@ public class Smartphone {
         this.model = model;
         this.ramMemory = ramMemory;
     }
+
 }
