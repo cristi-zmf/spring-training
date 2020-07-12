@@ -15,6 +15,13 @@ class PolymorphismTest {
 
     /*Implement these method so that the test above passes*/
     public static Animal aCow() {
-        return null;
+        return new Cow();
+    }
+
+    public static class Cow implements Animal {
+        @Override
+        public String cry() {
+            return "moo";
+        }
     }
 }
