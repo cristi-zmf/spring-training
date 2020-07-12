@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -21,18 +22,5 @@ public class Employer {
     private Long id;
     private String employerName;
     private String employerAddress;
-
-    public Employer(String employerName, String employerAddress) {
-        this.employerName = employerName;
-        this.employerAddress = employerAddress;
-    }
-
-
-    public String getEmployerName() {
-        return employerName;
-    }
-
-    public String getEmployerAddress() {
-        return employerAddress;
-    }
+    private BigDecimal raiseFactor;
 }
