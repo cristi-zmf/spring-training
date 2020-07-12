@@ -11,7 +11,7 @@ public class ReadOnlyMemory implements Memory {
 
     @Override
     public void write(String memoryFragment) {
-        //I am forced to use this because of not applying interface seggregation
+        //I am forced to use this because of not applying interface segregation
         //principle :(
     }
 }
