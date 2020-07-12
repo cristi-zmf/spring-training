@@ -13,19 +13,20 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
-@NoArgsConstructor(force = true)
+@NoArgsConstructor
 @AllArgsConstructor
 public class Employer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private final String employerName;
-    private final String employerAddress;
+    private String employerName;
+    private String employerAddress;
 
     public Employer(String employerName, String employerAddress) {
         this.employerName = employerName;
         this.employerAddress = employerAddress;
     }
+
 
     public String getEmployerName() {
         return employerName;
