@@ -3,7 +3,6 @@ package com.cristi.simple.spring.simplespring.exercises.ex5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 /*
@@ -25,11 +24,9 @@ public class ShoppingCentre {
     }
 
     public List<Pants> findPantsBySize(int size){
-        //TODO implement me
-        return Collections.emptyList();
+        return jpaRepo.findBySize(size);
     }
     public List<Pants> showMePantsByBrand(String brand){
-        //TODO implement me
-        return Collections.emptyList();
+        return jpaRepo.findByBrandContainingIgnoreCase(brand);
     }
 }

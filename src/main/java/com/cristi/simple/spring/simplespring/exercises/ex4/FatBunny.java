@@ -3,6 +3,7 @@ package com.cristi.simple.spring.simplespring.exercises.ex4;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /*
@@ -30,5 +31,15 @@ public class FatBunny {
 
     public int getWeight() {
         return weight.getWeight();
+    }
+
+    @PostConstruct
+    public void doSomethingAfterBeanInstantiation() {
+        System.out.println("Doing something at the end of bean creation lifecycle");
+    }
+
+    @PreDestroy
+    public void doSomethingBeforeShuttingDown() {
+        weight.dropWeight(10);
     }
 }

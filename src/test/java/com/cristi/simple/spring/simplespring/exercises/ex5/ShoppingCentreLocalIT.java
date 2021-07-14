@@ -25,10 +25,11 @@ class ShoppingCentreLocalIT {
 
     @Test
     void showMePantsByBrand() {
-        List<Pants> pantsBySize = sut.showMePantsByBrand("ZARA");
+        List<Pants> pantsBySize = sut.showMePantsByBrand("zara");
         assertThat(pantsBySize).hasSize(1);
         Pants pants = pantsBySize.get(0);
-        assertThat(pants.getBrand()).isEqualTo("ZARA");
+        String actualValue = pants.getBrand().toLowerCase();
+        assertThat(actualValue).isEqualTo("zara");
 
     }
 }
