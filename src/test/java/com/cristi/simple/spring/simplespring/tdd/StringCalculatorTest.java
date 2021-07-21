@@ -38,7 +38,7 @@ class StringCalculatorTest {
 
     @Test
     void shouldAcceptNewDelimiter() {
-            int result = StringCalculator.add("//;\n1;2");
+        int result = StringCalculator.add("//;\n1;2");
         Assertions.assertThat(result).isEqualTo(3);
     }
 
